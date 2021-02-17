@@ -1,0 +1,43 @@
+
+ html, body{
+      display: grid;
+      height: 100%;
+      place-items: center;
+      background:#DEB887;
+      font-size: 40px;
+  }
+
+  button {
+    background-color: plum;
+    color: white;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+  }
+
+#dialogoverlay{
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #FFF;
+	width: 100%;
+	z-index: 10;
+}
+#dialogbox{
+	display: none;
+	position: fixed;
+	background: #000;
+	border-radius:7px; 
+	width:550px;
+	z-index: 10;
+}
+
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #FFC0CB; font-size:25px; padding:10px; color: black }
+#dialogbox > div > #dialogboxbody{ background: beige; padding:20px; color: black }
+#dialogbox > div > #dialogboxfoot{ background: #FFC0CB; padding:10px; text-align:center; color: black;}

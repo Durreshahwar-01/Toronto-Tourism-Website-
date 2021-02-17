@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="restaurants.css">
+<script>
+function CusAlert(){
+    this.render = function(dialog){
+        var winWidth = window.innerWidth;
+        var winHeight = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var dialogbox = document.getElementById('dialogbox');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winHeight+"px";
+        dialogbox.style.left = (winWidth/2) - (550 * .5)+"px";
+        dialogbox.style.top = "100px";
+        dialogbox.style.display = "block";
+        document.getElementById('dialogboxhead').innerHTML = "Toursim in Toronto";
+        document.getElementById('dialogboxbody').innerHTML = dialog;
+        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">Done</button>';
+    }
+	this.ok = function(){
+		document.getElementById('dialogbox').style.display = "none";
+		document.getElementById('dialogoverlay').style.display = "none";
+	}
+}
+var Alert = new CusAlert();
+</script>
+</head>
+<body>
+<div id="dialogoverlay"></div>
+<div id="dialogbox">
+  <div>
+    <div id="dialogboxhead"></div>
+    <div id="dialogboxbody"></div>
+    <div id="dialogboxfoot"></div>
+  </div>
+</div>
+<h1> Restaurants in Toronto </h1>
+<p> Please choose a Restaurant Category </p>
+<button onclick="Alert.render('Here are a list of Italian Restaurants in the City: Carisma, Il Fornello, Donatello Restaurant, Trattoria Fieramosca, Piano Piano Restaurant, Buca and many more!')"> Italian Restaurants </button>
+<button onclick="Alert.render('Here are a list of French Restaurants in the City: Batifole, Jacques Bistro Du Parc,  Veloute Bistro & Catering, Le Sélect Bistro, Sauvignon Bistro and many more!')"> French Restaurants </button>
+<button onclick="Alert.render('Here are a list of Popular Restaurants in the City: Boston Pizza, Milestone, Jack Astors, Drake One Fifty and many more!')"> Popular Restaurants </button>
+
+</body>
+</html>

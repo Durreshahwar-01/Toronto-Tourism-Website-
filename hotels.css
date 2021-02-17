@@ -1,0 +1,19 @@
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background:#DEB887;
+    font-size: 30px;
+    text-align: center;
+}
+
+button {
+background-color: navy;
+    color: white;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 25px;
+}
